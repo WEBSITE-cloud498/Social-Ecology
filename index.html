@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome | Social Ecology in Philosophy</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background: linear-gradient(135deg, #e8f5e9 0%, #a5d6a7 100%);
+      color: #1b5e20;
+      font-family: 'Segoe UI', 'Roboto', 'Arial', sans-serif;
+    }
+    .logo-row {
+      display: flex;
+      gap: 2rem;
+      margin-bottom: 2rem;
+    }
+    .logo-img {
+      width: 120px;
+      height: 120px;
+      object-fit: contain;
+      border-radius: 16px;
+      box-shadow: 0 2px 12px rgba(67, 160, 71, 0.15);
+      margin-right: 0;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .welcome-msg {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 2rem;
+      text-align: center;
+      font-family: 'Merriweather', 'Georgia', serif;
+      animation: fadeIn 1.2s ease;
+    }
+    .enter-btn {
+      padding: 0.8rem 2.2rem;
+      font-size: 1.2rem;
+      background: #43a047;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: 600;
+      box-shadow: 0 2px 8px rgba(67, 160, 71, 0.1);
+      transition: background 0.2s;
+      margin-bottom: 2rem;
+      animation: fadeIn 1.2s ease;
+    }
+    footer {
+      width: 100vw;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      background: #388e3c;
+      color: #fff;
+      font-size: 1.1rem;
+      padding: 1rem 0;
+      text-align: center;
+      border-radius: 0;
+      box-shadow: 0 -2px 8px rgba(67, 160, 71, 0.1);
+    }
+  </style>
+</head>
+
+<body>
+    <div class="logo-row">
+      <img src="logo1.png.jpg" alt="Logo 1" class="logo-img">
+      <img src="logo2.png.jpg" alt="Logo 2" class="logo-img">
+    </div>
+    <div class="welcome-msg">Welcome to Social Ecology in Philosophy</div>
+    <button class="enter-btn" onclick="window.location.href='Home Page.html'">Enter</button>
+    <footer>
+      <span style="font-weight: bold;">Made By Group 2 </span>
+    </footer>
+  </body>
+</html>
