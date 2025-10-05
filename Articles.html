@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Articles & Resources</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+    .dropbtn {
+      background: #43a047;
+      color: #fff;
+      padding: 0.8rem 1.2rem;
+      font-size: 1.1rem;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: 500;
+      transition: background 0.2s;
+    }
+    .dropbtn:hover, .dropbtn:focus {
+      background: #388e3c;
+    }
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background: #c8e6c9;
+      right: 0;
+      left: auto;
+      min-width: 180px;
+      width: 18vw;
+      max-width: 320px;
+      box-shadow: 0 2px 8px rgba(67, 160, 71, 0.1);
+      z-index: 1;
+      border-radius: 8px;
+      margin-top: 0.5rem;
+    }
+    .dropdown-content.show {
+      display: block;
+    }
+    .dropdown-content a {
+      color: #1b5e20;
+      padding: 1rem 1.2rem;
+      text-decoration: none;
+      display: block;
+      font-weight: 500;
+      border-bottom: 1px solid #a5d6a7;
+      transition: background 0.2s;
+    }
+    .dropdown-content a:last-child {
+      border-bottom: none;
+    }
+    .dropdown-content a:hover {
+      background: #a5d6a7;
+    }
+    nav {
+      margin-top: 1rem;
+      text-align: right;
+    }
+    .dropdown {
+      position: relative;
+      display: block;
+      float: right;
+    }
+    .dropdown-content {
+      right: 0;
+      left: auto;
+      min-width: 180px;
+      width: 18vw;
+      max-width: 320px;
+    }
+    @media (max-width: 900px) {
+      .dropdown-content {
+        width: 30vw;
+        min-width: 120px;
+        max-width: 220px;
+      }
+    }
+    @media (max-width: 600px) {
+      .dropdown-content {
+        width: 60vw;
+        min-width: 80px;
+        max-width: 160px;
+      }
+    }
+  </style>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var dropbtn = document.querySelector('.dropbtn');
+      var dropdownContent = document.querySelector('.dropdown-content');
+      dropbtn.addEventListener('click', function(e) {
+        e.stopPropagation();
+        dropdownContent.classList.toggle('show');
+      });
+      dropdownContent.querySelectorAll('a').forEach(function(link) {
+        link.addEventListener('click', function() {
+          dropdownContent.classList.remove('show');
+        });
+      });
+      document.addEventListener('click', function(e) {
+        if (!dropdownContent.contains(e.target) && e.target !== dropbtn) {
+          dropdownContent.classList.remove('show');
+        }
+      });
+    });
+  </script>
+</head>
+<body>
+  <header>
+    <h1>Articles & Resources</h1>
+    <nav>
+      <div class="dropdown">
+        <button class="dropbtn">Menu</button>
+        <div class="dropdown-content">
+          <a href="Home Page.html">Home</a>
+          <a href="Exploring Our Relationship with Nature.html">Exploring Our Relationship with Nature</a>
+          <a href="Understanding How Our Environment Works.html">Understanding How Our Environment Works</a>
+          <a href="The Challenges Our Planet Faces.html">The Challenges Our Planet Faces</a>
+          <a href="Solutions.html">Solutions</a>
+          <a href="Articles.html">Articles & Resources</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <section>
+      <h2>Featured Articles/Books</h2>
+      <ul class="articles-list">
+        <li><a href="https://theanarchistlibrary.org/library/murray-bookchin-the-philosophy-of-social-ecology">The Roots of Social Ecology</a></li>
+        <li><a href="https://www.activesustainability.com/environment/philosophy-nature">Our Relationship With Our Environment</a></li>
+        <li><a href="https://plato.stanford.edu/entries/aristotle-natphil/">Aristotle’s Natural Philosophy</a></li>
+      </ul>
+      <h2>Resources</h2>
+      <ul class="resources-list">
+  <li><a href="https://plato.stanford.edu">Books & Publications</a></li>
+  <li><a href="https://theanarchistlibrary.org">Organizations</a></li>
+      </ul>
+    </section>
+  </main>
+  <footer>
+    <span style="font-weight: bold;">Made By Group 2</span>
+  </footer>
+</body>
+</html>

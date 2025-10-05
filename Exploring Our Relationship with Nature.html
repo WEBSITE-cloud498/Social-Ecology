@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exploring Our Relationship with Nature</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    nav {
+      margin-top: 1rem;
+      text-align: right;
+    }
+    .dropdown {
+      position: relative;
+      display: block;
+      float: right;
+    }
+    .dropbtn {
+      background: #43a047;
+      color: #fff;
+      padding: 0.8rem 1.2rem;
+      font-size: 1.1rem;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: 500;
+      transition: background 0.2s;
+    }
+    .dropbtn:hover, .dropbtn:focus {
+      background: #388e3c;
+    }
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background: #c8e6c9;
+      right: 0;
+      left: auto;
+      min-width: 180px;
+      width: 18vw;
+      max-width: 320px;
+      box-shadow: 0 2px 8px rgba(67, 160, 71, 0.1);
+      z-index: 1;
+      border-radius: 8px;
+      margin-top: 0.5rem;
+    }
+    .dropdown-content.show {
+      display: block;
+    }
+    .dropdown-content a {
+      color: #1b5e20;
+      padding: 1rem 1.2rem;
+      text-decoration: none;
+      display: block;
+      font-weight: 500;
+      border-bottom: 1px solid #a5d6a7;
+      transition: background 0.2s;
+    }
+    .dropdown-content a:last-child {
+      border-bottom: none;
+    }
+    .dropdown-content a:hover {
+      background: #a5d6a7;
+    }
+    .about-section {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+    .about-img {
+      width: 220px;
+      height: 320px;
+      max-width: 90vw;
+      object-fit: cover;
+      border-radius: 16px;
+      box-shadow: 0 2px 12px rgba(67, 160, 71, 0.15);
+      display: block;
+      margin: 0 auto;
+    }
+    .about-text {
+      flex: 1;
+      min-width: 220px;
+    }
+    @media (max-width: 900px) {
+      .about-section {
+        flex-direction: column;
+        gap: 1.5rem;
+      }
+      .about-img {
+        width: 180px;
+        height: 260px;
+      }
+      .dropdown-content {
+        width: 30vw;
+        min-width: 120px;
+        max-width: 220px;
+      }
+    }
+    @media (max-width: 600px) {
+      .about-section {
+        flex-direction: column;
+        gap: 1rem;
+      }
+      .about-img {
+        width: 120px;
+        height: 180px;
+      }
+      .about-text {
+        min-width: 0;
+      }
+      h1, h2 {
+        font-size: 1.3rem;
+      }
+      p {
+        font-size: 1rem;
+      }
+      .dropdown-content {
+        width: 60vw;
+        min-width: 80px;
+        max-width: 160px;
+      }
+    }
+  </style>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var dropbtn = document.querySelector('.dropbtn');
+      var dropdownContent = document.querySelector('.dropdown-content');
+      dropbtn.addEventListener('click', function(e) {
+        e.stopPropagation();
+        dropdownContent.classList.toggle('show');
+      });
+      dropdownContent.querySelectorAll('a').forEach(function(link) {
+        link.addEventListener('click', function() {
+          dropdownContent.classList.remove('show');
+        });
+      });
+      document.addEventListener('click', function(e) {
+        if (!dropdownContent.contains(e.target) && e.target !== dropbtn) {
+          dropdownContent.classList.remove('show');
+        }
+      });
+    });
+  </script>
+</head>
+<body>
+  <header>
+    <h1>Exploring Our Relationship with Nature</h1>
+    <nav>
+      <div class="dropdown">
+        <button class="dropbtn">Menu</button>
+        <div class="dropdown-content">
+          <a href="Home Page.html">Home</a>
+          <a href="Exploring Our Relationship with Nature.html">Exploring Our Relationship with Nature</a>
+          <a href="Understanding How Our Environment Works.html">Understanding How Our Environment Works</a>
+          <a href="The Challenges Our Planet Faces.html">The Challenges Our Planet Faces</a>
+          <a href="Solutions.html">Solutions</a>
+          <a href="Articles.html">Articles & Resources</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <section class="about-section">
+      <div class="about-text">
+        <h2>What is Nature to Us?</h2>
+          <p>The relationship between humans and nature is one of deep connection and mutual dependence. We rely on nature for the things that keep us alive, like air, water, food, and shelter. At the same time, everything we do affects the natural world around us. This connection is not just about survival but also about our responsibility to take care of the environment that supports us.</p>
+        </p>
+        <p>Nature gives us the resources and balance we need to live, while our actions can either protect or harm it. When people live in harmony with nature, both sides benefit and thrive. But when we ignore or abuse it, problems like pollution, climate change, and loss of wildlife begin to grow.</p>
+        <p>In simple terms, humans and nature are partners. We are part of the environment, not separate from it, and understanding this helps us build a better, healthier world for everyone.</p>
+      </div>
+      <img src="forest-placeholder.avif" alt="Forest scene" class="about-img">
+    </section>
+  </main>
+  <footer>
+    <span style="font-weight: bold;">Made By Group 2</span>
+  </footer>
+</body>
+</html>
